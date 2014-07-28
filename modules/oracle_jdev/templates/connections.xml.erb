@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+   <Reference name="IntegratedWebLogicServer" className="oracle.rc.asadapter.connection.AppServerProvider" credentialStoreKey="IntegratedWebLogicServer" xmlns="">
+      <Factory className="oracle.rc.asadapter.connection.AppServerProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="HTTP_PORT">
+            <Contents>7101</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="JMX_CONNECTOR_SSL_PORT">
+            <Contents>7102</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnectionType">
+            <Contents>WebLogic_12.x</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>weblogic</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="weblogic.domain">
+            <Contents>DefaultDomain</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="JMX_CONNECTOR_HOST">
+            <Contents>127.0.0.1</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="HTTPS_PORT">
+            <Contents>7102</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="JMX_CONNECTOR_PORT">
+            <Contents>7101</Contents>
+         </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HR" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="HR" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="sid">
+            <Contents>XE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>hr</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>localhost</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="SYS" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="SYS" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="sid">
+            <Contents>XE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>sys</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>localhost</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents>SYSDBA</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+</References>
