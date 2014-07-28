@@ -5,9 +5,10 @@ rem DDL statements to create tables and other database objects
 --  DDL for Type STRING_TABLE
 --------------------------------------------------------
 
-  CREATE OR REPLACE TYPE "STRING_TABLE" as table of varchar2(500);
-
+CREATE OR REPLACE TYPE "STRING_TABLE" as table of varchar2(500);
 /
+
+
 
 --------------------------------------------------------
 --  DDL for Table WC_FOOTBALL_REGIONS
@@ -18,7 +19,7 @@ rem DDL statements to create tables and other database objects
 	"NAME" VARCHAR2(30 BYTE), 
 	"CONTINENT" VARCHAR2(2 BYTE)
    ) ;
-/
+
 --------------------------------------------------------
 --  DDL for Table WC_MATCH_RESULTS
 --------------------------------------------------------
@@ -34,7 +35,7 @@ rem DDL statements to create tables and other database objects
 	"SCORING_PROCESS" VARCHAR2(20 BYTE), 
 	"ID" NUMBER(2,0)
    ) ;
-/
+
 --------------------------------------------------------
 --  DDL for Table WC_MATCH_TAGS
 --------------------------------------------------------
@@ -43,7 +44,7 @@ rem DDL statements to create tables and other database objects
    (	"TAG_ID" NUMBER(4,0), 
 	"MATCH_ID" NUMBER
    ) ;
-/
+
 --------------------------------------------------------
 --  DDL for Table WC_STADIUMS
 --------------------------------------------------------
@@ -55,7 +56,7 @@ rem DDL statements to create tables and other database objects
 	"LATTITUDE" NUMBER(5,2), 
 	"LONGITUDE" NUMBER(5,2)
    ) ;
-/
+
 --------------------------------------------------------
 --  DDL for Table WC_TAGS
 --------------------------------------------------------
@@ -64,7 +65,7 @@ rem DDL statements to create tables and other database objects
    (	"ID" NUMBER(4,0), 
 	"TAG" VARCHAR2(200 BYTE)
    ) ;
-/
+
 --------------------------------------------------------
 --  DDL for Table WC_TEAMS
 --------------------------------------------------------
@@ -77,6 +78,6 @@ rem DDL statements to create tables and other database objects
 	"FIFA_RANK" NUMBER(3,0), 
 	"RGN_ID" NUMBER(2,0)
    ) ;
-/
+
 
 
