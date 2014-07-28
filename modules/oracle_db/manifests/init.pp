@@ -208,26 +208,11 @@ file {'remove_package':
     force => true,
     require	=> Package["oracle-xe"],
    }
-tidy { "remove_rpm_zip":
-    path => "/home/vagrant",
-    recurse => true,
-    matches => [ "oracle-xe-11.2.0-1.0.x86_64.rpm.zi*" ],
-    require	=> Exec["alien xe"],
-} 
-exec { "really_remove_rpm_zip":
+exec { "let_me_remove_rpm_zip":
 		command		=> "rm /home/vagrant/oracle-xe-11.2.0-1.0.x86_64.rpm.zip",
-		user		=> "oracle",
+		path => "/bin",
+		user		=> "vagrant",
 		logoutput => true,
     require	=> Exec["alien xe"],
 }   
-/*
-file {'remove_rpm_zip':
-    ensure => absent,
-    path => '/home/vagrant/oracle-xe-11.2.0-1.0.x86_64.rpm.zip',
-    recurse => false,
-    purge => true,
-    force => true,
-    require	=> Exec["unzip xe"],
-   }
-   */
 }
