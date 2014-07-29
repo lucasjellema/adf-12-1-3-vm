@@ -15,6 +15,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # any network request on the host made to the specified port (8888 or 1521) should be forwarded into the VM and handled there
   config.vm.network :forwarded_port, guest: 8080, host: 8888
   config.vm.network :forwarded_port, guest: 1521, host: 1521
+  # also forward requests to port 7101 in the VM - that is where the JDeveloper Integrated WebLogic Server is typically running
+  config.vm.network :forwarded_port, guest: 7101, host: 7501
+  config.vm.network :forwarded_port, guest: 7102, host: 7502
+
 
   config.vm.synced_folder "files", "/etc/puppet/files"
   config.vm.synced_folder "files", "/vagrant", :mount_options => ["dmode=777","fmode=777"]
@@ -29,9 +33,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	# unfortunately, the description of a VirtualBox VM cannot be set at the present; this next line would not work
 	# vb.description = "Handy little VM for hands-on with the latest JDeveloper and ADF or for simple Database experiments"
   end
-
-
-
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "manifests"
