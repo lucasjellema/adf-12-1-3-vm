@@ -7,6 +7,7 @@ include oracle_db::swap
 include oracle_db::xe
 include oracle_db::hr_schema
 include oracle_db::teardown
+include oracle_amis_sample::clone_git_repos
 include oracle_jdev::install
 
 include oracle_amis_sample::install 

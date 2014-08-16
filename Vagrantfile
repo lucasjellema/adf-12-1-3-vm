@@ -28,6 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", "4096"]	
+    vb.customize ["modifyvm", :id, "--vram", "32"]
     vb.gui = true
     vb.name = "JDeveloper 12.1.3 with Oracle Database XE 11gR2 on Ubuntu"
 	# unfortunately, the description of a VirtualBox VM cannot be set at the present; this next line would not work
